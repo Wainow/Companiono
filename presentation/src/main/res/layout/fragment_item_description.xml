@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorLiteBackground">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/description_layout"
+            tools:context=".description.CompanyDescriptionFragment"
+            android:scrollbars = "vertical">
+
+            <androidx.cardview.widget.CardView
+                android:visibility="invisible"
+                android:id="@+id/card_info"
+                app:layout_constraintHeight_max="300dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_min="100dp"
+                app:layout_constraintWidth_min="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/description_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/colorLiteBackground">
+
+                <ImageView
+                    android:id="@+id/img_info"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/description_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_info" />
+
+        <TextView
+            android:id="@+id/lat_lon_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/description_info"
+            app:layout_constraintTop_toBottomOf="@+id/description_info" />
+
+        <TextView
+            android:id="@+id/www_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/lat_lon_info"
+            app:layout_constraintTop_toBottomOf="@+id/lat_lon_info" />
+
+        <TextView
+            android:id="@+id/phone_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/card_info"
+            app:layout_constraintStart_toStartOf="@+id/www_info"
+            app:layout_constraintTop_toBottomOf="@+id/www_info" />
+
+            <ProgressBar
+                android:id="@+id/pd_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
